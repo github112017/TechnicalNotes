@@ -1,0 +1,6 @@
+consul agent -dev --data-dir=c:\var\consul\data
+
+consul agent -server -ui --data-dir=c:\var\consul\data -bind=127.0.0.1
+
+docker run -d -p 8400:8400 -p 8500:8500 -p 8600:8600/udp --name=consul -v c:/var/consul/data:/consul/data consul agent -server -ui -client=0.0.0.0
+
