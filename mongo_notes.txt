@@ -16,6 +16,9 @@ Mongo commands
 show dbs
 use myDB
 
+//Drop database
+db.dropDatabase() 
+
 // Authenticate
 db.auth("username", "password");
 
