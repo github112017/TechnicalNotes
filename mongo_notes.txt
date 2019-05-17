@@ -1,0 +1,19 @@
+mongo.exe --username=admin
+
+docker volume create --name=mongodata
+docker run --rm --name=mongo -d -p 27017:27017 -v mongodata:/data/db mongo mongod --auth
+
+
+db.createUser(
+  {
+    user: "admin",
+    pwd: "manager",
+    roles: [ { role: "userAdminAnyDatabase", db: "admin" }, "readWriteAnyDatabase" ]
+  }
+)
+
+Mongo commands
+---------------
+show dbs
+use myDB
+
