@@ -16,3 +16,33 @@ Mongo commands
 show dbs
 use myDB
 
+// Authenticate
+db.auth("username", "password");
+
+// Logout
+db.logout()
+
+// list all collections
+show collections;
+db.getCollectionNames();
+
+// List down all the users of current database
+show users;
+db.getUsers();
+
+// List down all the roles
+show roles
+
+
+// Insert single document
+db.<collectionName>.insert({field1: "value", field2: "value"})
+
+// Update document
+db.<collectionName>.save({"_id": new ObjectId("jhgsdjhgdsf"), field1: "value", field2: "value"});
+
+//Query
+db.<collectionName>.find();
+db.<collectionName>.find().limit(10);
+db.<collectionName>.find({"_id": ObjectId("someid")});
+db.<collectionName>.count();
+
