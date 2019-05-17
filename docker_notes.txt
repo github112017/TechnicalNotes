@@ -1,0 +1,32 @@
+redis
+=======
+docker pull redis
+docker volume create --name redis-data
+docker run -p 6379:6379 -d --rm --name=redis -v redis-data:/data redis
+
+docker exec -it redis-dev /bin/bash
+
+spring-boot with redis
+=================================
+docker build -t examples/boot-redis .
+docker run --link my-redis --name=boot-redis -p:8080:8080 examples/boot-redis
+
+ubuntu
+=======
+docker run --name=my-ubuntu -it -v c:/var:/data ubuntu
+docker attach my-ubuntu
+
+pgsql
+======
+docker volume create --name pgdata
+docker run -p 5432:5432 -d --rm --name=postgres -e POSTGRES_PASSWORD=manager -v pgdata:/var/lib/postgresql/data postgres
+
+
+mongodb
+==========
+docker volume create --name=mongodata
+docker run --rm --name=mongo -d -p 27017:27017 -v mongodata:/data/db mongo mongod --auth
+
+consul
+=======
+docker run -d -p 8400:8400 -p 8500:8500 -p 8600:8600/udp --name=consul -v c:/var/consul/data:/consul/data consul agent -server -ui -client=0.0.0.0
