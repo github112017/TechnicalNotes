@@ -49,3 +49,9 @@ db.<collectionName>.find().limit(10);
 db.<collectionName>.find({"_id": ObjectId("someid")});
 db.<collectionName>.count();
 
+//mongoose
+const connectOption = {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  auth: { authdb: "admin" }
+};
