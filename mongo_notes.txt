@@ -50,8 +50,18 @@ db.<collectionName>.find({"_id": ObjectId("someid")});
 db.<collectionName>.count();
 
 //mongoose
+const mongoose = require('mongoose');
+const host = process.env.DB_HOST || '127.0.0.1'
+const username = process.env.DB_USERNAME || 'admin';
+const password = process.env.DB_PASSWOED || 'manager';
+const dbURL = `mongodb://${username}:${password}@${host}/Loc8r`;
 const connectOption = {
   useNewUrlParser: true,
   useCreateIndex: true,
   auth: { authdb: "admin" }
 };
+
+const connect = () => {
+  setTimeout(() => mongoose.connect(dbURL, connectOption), 1000);
+}
+
