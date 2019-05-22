@@ -38,6 +38,17 @@ $ npm outdated
 -- Updating a Package
 $npm update express
 
+-- Searching for Packages
+$ npm search mkdir
+
+-- Clean cache
+npm cache clean --force
+
+
+Patch releases: 1.0 or 1.0.x or ~1.0.4
+Minor releases: 1 or 1.x or ^1.0.4
+Major releases: * or x
+
 
 
 
