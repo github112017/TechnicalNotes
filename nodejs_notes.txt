@@ -32,8 +32,11 @@ $ npm install underscore -g
 -- uninstall
 $ npm uninstall underscore
 
--- Updating a Package
+-- Let’s check if there’s an update
 $ npm outdated
+
+-- Updating a Package
+$npm update express
 
 
 
