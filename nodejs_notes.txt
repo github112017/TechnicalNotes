@@ -1,5 +1,41 @@
 -- Create a node project
-node init
+npm init
 
 -- Create an exprexx project
 express --css=less --view=hbs --git
+
+-- npm command --
+=====================================
+$ npm --version
+
+-- Updating npm 
+--linux / mac
+npm install npm@latest -g
+-- windows
+Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force
+npm install --global --production npm-windows-upgrade
+npm-windows-upgrade --npm-version latest
+
+-- show config
+$ npm config list
+$ npm config get prefix
+
+-- list package
+$ npm list 
+$ npm list --global
+$ npm list -g --depth=0
+
+-- install
+$ npm install underscore
+$ npm install underscore -g
+
+-- uninstall
+$ npm uninstall underscore
+
+-- Updating a Package
+$ npm outdated
+
+
+
+
+
