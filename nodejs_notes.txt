@@ -1,6 +1,9 @@
 -- Create a node project
 npm init
 
+-- install express-generator
+npm i -g express-generator
+
 -- Create an exprexx project
 express --css=less --view=hbs --git
 
