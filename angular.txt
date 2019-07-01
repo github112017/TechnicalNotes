@@ -1,9 +1,8 @@
 // creates a bound function that has the same body as the original function.
-
-  private getPosition(): void {
+private getPosition(): void {
     this.message = 'Getting your location...';
     this.geoLocationService.getPosition(
       this.getLocations.bind(this),
       this.showError.bind(this),
       this.noGeo.bind(this));
-  }
+}
