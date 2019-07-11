@@ -1,0 +1,22 @@
+Next.js
+================================================
+mkdir hello-next
+cd hello-next
+npm init -y
+npm install --save react react-dom next
+mkdir pages
+
+replace scripts with the following:
+
+"scripts": {
+  "dev": "next",
+  "build": "next build",
+  "start": "next start"
+}
+
+React
+==================================================
+Quick Start
+npx create-react-app my-app
+cd my-app
+npm start
