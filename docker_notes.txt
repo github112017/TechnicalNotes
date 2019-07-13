@@ -30,3 +30,6 @@ docker run --rm --name=mongo -d -p 27017:27017 -v mongodata:/data/db mongo mongo
 consul
 =======
 docker run -d -p 8400:8400 -p 8500:8500 -p 8600:8600/udp --name=consul -v c:/var/consul/data:/consul/data consul agent -server -ui -client=0.0.0.0
+
+docker-compose up
+docker-compose down
