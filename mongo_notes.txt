@@ -43,6 +43,9 @@ db.<collectionName>.insert({field1: "value", field2: "value"})
 // Update document
 db.<collectionName>.save({"_id": new ObjectId("jhgsdjhgdsf"), field1: "value", field2: "value"});
 
+// delete document
+db.<collectionName>.remove({field: "value"})
+
 //Query
 db.<collectionName>.find();
 db.<collectionName>.find().limit(10);
